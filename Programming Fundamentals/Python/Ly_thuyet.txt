@@ -1,0 +1,16 @@
+Links: https://drive.google.com/file/d/1Hu_Rd-spILyNWmoBw1HubHWrkmfz0zKh/view
+
+1. List và Loops
+Máy tính hoạt động theo từng bước, như vậy khi có một danh sách, máy không thể nhìn tổng quan mà sẽ scan từng dòng/ô để quét đến giá trị ta cần
+--> Sử dụng Loops (cấu trúc lặp), có thể loop lồng loop = O(n^số loop)
+
+Ngoài vòng 'for', cấu trúc lặp 'while' được sử dụng khi chưa biết giới hạn dừng:
+
+- Trong thiết kế Game, vòng while được sử dụng để user chạy không dừng và có thể quit khi muốn.
+Nếu biến vẫn giữ giá trị đúng/thỏa mãn --> Game tiếp tục chạy
+Nếu biến rơi vào trường hợp sai/không thỏa mãn --> End Game
+
+2. Functions
+- Một khối code được thiết kế chức năng riêng, giải quyết một công việc riêng (lời giải phụ trong lời giải lớn)
+- Cấu trúc một bài code được triển khai rõ ràng, dễ nắm bắt
+--> Tiền đề cho OOP Struct, Class
