@@ -54,7 +54,14 @@ import pandas as pd
 |---|---|---|
 |.Series()|Tạo một list/Dictionary|pd.Series(np.array()) --> 1 chiều|
 |.DataFrame()|Tập hợp của nhiều Series|pd.DataFrame(List), tạo từ dictionary thì sẽ tạo các cột --> chèn list index={}|
+|.groupby()|Nhóm dữ liệu cùng cột|name.groupby('Insta').median() hoặc .agg(), .count(),...|
+|.concat|Nối dữ liệu (cùng nhóm cột, thứ tự)|pandas.concat(Danh_sach, axis = ..., join = '')|
 
+Ngoài ra có thể sử dụng cấu trúc của SQL cho các vị trí chỉ định
+ ```python
+pandas.merge(left, how = 'inner', sort = False, validate = None)
+ ```
+ Rất nhiều ôi trời ơi!
 
 ### 2.3. Mục đích
 - Làm việc với bảng dữ liệu csv, excel, SQL,...
