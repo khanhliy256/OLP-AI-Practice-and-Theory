@@ -38,22 +38,50 @@ train_test_split(X, y, test_size = ..., random_state = ...)
 --> Cố định seeds (random_state = number)
 
 - Bước 3: Xử lý dữ liệu --> Phân loại
-* Label Encoding: Mã hóa 1 biến thành số nguyên
+Một số dữ liệu có range lớn --> Chiếm ưu thế so với mặt bằng chung --> Một số dự đoán có thể không chính xác.
+
+    * Label Encoding: Mã hóa 1 biến thành số nguyên
 Ví dụ: 'apple' = 0, 'banana' = 1, 'orange' = 2
 ```python 
 # Thư viện 
 sklearn.preprocssing 
 # Hàm 
-LabelEncode().
-fit_transform(list)
+LabelEncode()
+.fit_transform(list)
 ```
-* One-Hot Encoding: Đưa về cột nhị phân = 1 biến
+    * One-Hot Encoding: Đưa về cột nhị phân = 1 biến
 ```python
 # Hàm
 OneHotEncoder(sparse_output=False) 
-fit_transform(2D_shape)
+.fit_transform(2D_shape)
 ```
 --> Ma trận thưa --> mảng Numpy đầy đủ.
+
+    * MinMaxScaler chuẩn hóa theo max-min value
+
+```python
+# Hàm
+MinMaxScaler()
+.fit_transform(arrays)
+```
+    * Standardization (Z-score Normalization) 
+```python
+# Hàm
+StandardScaler()
+.fit_transform(df)
+```
+
+    * Robust Scaling sử dụng trung bị và khoảng cách 
+```python
+# Hàm
+RobustScaler()
+.fit_transform(df)
+```
+
+|Label Encoding|One-Hot Encoding|MinMaxScaler|Standardization|Robust Scaling|
+|---|---|---|---|---|
+|Mã hóa phân loại|Chuẩn hóa dữ liệu số|
+|Gán số nguyên (cây quyết định), có thứ tự|Cột nhị phân 0/1. Thuật khoảng cách (không thứ tự)|đưa về khoảng [0,1], không có ngoại lệ, không phân phối chuẩn|Nhiều ngoại lệ Outliers|
 
 - Bước 4: Huấn luyện mô hình
 Áp dụng các thuật toán Regression 
