@@ -7,6 +7,35 @@ Scikit-learn là thư viện hỗ trợ cho các bài toán học máy.
 
 - Cơ chế: thực hiện nhờ vào `numpy` tính toán đại số, xử lý mảng arrays.
 
+|Tính năng||
+|---|---|
+|Data Splitting|Chia nhỏ dữ liệu để train + test|
+|Feature Scaling|Chuẩn hóa các giá trị|
+|Feature Selection|Chọn các đặc trưng phù hợp|
+|Feature extraction|Tạo đặc trưng mới từ dữ liệu sẵn có|
+
+## Thư viện
+```python
+import sklearn
+```
+
+### Xây dựng mô hình trong Scikit-learn
+- Bước 1: Load dữ liệu 
+X = input biến, 
+y = giá trị dự đoán
+```python
+# Thư viện
+sklearn.datasets 
+```
+- Bước 2: Chia nhỏ dữ liệu
+Training set + Testing set --> 
+```python
+# Thư viện
+sklearn.model_selection 
+train_test_split(X, y, test_size = ..., random_state = ...)
+```
+--> Cố định seeds (random_state = number)
+
 ## Các bài toán
 ### 1.1. Preprocessing
 Trích xuất và chuẩn hóa đặc trưng (features)
