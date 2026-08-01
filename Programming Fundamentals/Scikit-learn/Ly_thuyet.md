@@ -83,7 +83,7 @@ RobustScaler()
 |Label Encoding|One-Hot Encoding|MinMaxScaler|Standardization|Robust Scaling|
 |---|---|---|---|---|
 |Mã hóa phân loại||Chuẩn hóa dữ liệu số|
-|Gán số nguyên (cây quyết định), có thứ tự|Cột nhị phân 0/1. Thuật khoảng cách (không thứ tự)|đưa về khoảng [0,1], không có ngoại lệ, không phân phối chuẩn|Nhiều ngoại lệ Outliers|
+|Gán số nguyên (cây quyết định), có thứ tự|Cột nhị phân 0/1. Thuật khoảng cách (không thứ tự)|đưa về khoảng [0,1], không có ngoại lệ, không phân phối chuẩn|Nhiều ngoại lệ Outliers|Không cần loại bỏ các ngoại lệ, giữ nguyên các biến số|
 
 - Bước 4: Huấn luyện mô hình
 Áp dụng các thuật toán Regression 
