@@ -28,5 +28,6 @@ Các loại biểu đồ:
 ```python
 import seaborn as sns
 ```
-- Seaborn trực quan hóa dữ liệu đẹp hơn (heatmap, boxplot,...)
-- Dùng trực tiếp DataFrame để vẽ
+- Seaborn trực quan hóa dữ liệu đẹp hơn (heatmap, boxplot, hisplot,...)
+- Dùng trực tiếp DataFrame để vẽ --> gắn liền với DataFrame
+
