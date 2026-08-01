@@ -43,6 +43,9 @@ class MyModel(nn.Module):
     def forward(self, x):
         # Kết nối các layer 
 ```
+Neuron có nhiều lớp, có tính kế thừa, luôn bao gồm 2 thành phần:
+- __init__()
+- forward()
 
 - Bước 2: Chuẩn bị dữ liệu X, y 
 - Bước 3: Khởi tạo mô hình
@@ -66,6 +69,13 @@ transforms
 ToTensor()
 ```
 
-Neuron có nhiều lớp, có tính kế thừa, luôn bao gồm 2 thành phần:
-- __init__()
-- forward()
+```python
+class CustomData(Dataset):
+    def __init__():
+        #
+    def __len__():
+        # Số lượng mẫu của dữ liệu
+    def __getitem__():
+        # Truy xuất và trả về mẫu 
+```
+
