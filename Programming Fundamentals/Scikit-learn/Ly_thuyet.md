@@ -24,7 +24,7 @@ import sklearn
 X = input biến, 
 y = giá trị dự đoán
 ```python
-# Thư viện
+# Thư viện - Ví dụ
 sklearn.datasets 
 ```
 - Bước 2: Chia nhỏ dữ liệu
@@ -32,9 +32,43 @@ Training set + Testing set -->
 ```python
 # Thư viện
 sklearn.model_selection 
+# Hàm 
 train_test_split(X, y, test_size = ..., random_state = ...)
 ```
 --> Cố định seeds (random_state = number)
+
+- Bước 3: Xử lý dữ liệu --> Phân loại
+* Label Encoding: Mã hóa 1 biến thành số nguyên
+Ví dụ: 'apple' = 0, 'banana' = 1, 'orange' = 2
+```python 
+# Thư viện 
+sklearn.preprocssing 
+# Hàm 
+LabelEncode().
+fit_transform(list)
+```
+* One-Hot Encoding: Đưa về cột nhị phân = 1 biến
+```python
+# Hàm
+OneHotEncoder(sparse_output=False) 
+fit_transform(2D_shape)
+```
+--> Ma trận thưa --> mảng Numpy đầy đủ.
+
+- Bước 4: Huấn luyện mô hình
+Áp dụng các thuật toán Regression 
+
+- Bước 5: Dự đoán
+```python
+.predict(X)
+```
+
+- Bước 6: Đánh giá độ chính xác của mô hình
+
+```python
+.accuracy(y_test, y_predict)
+```
+--> Xác suất [0,1], càng gần 1 thì độ chính xác càng cao.
 
 ## Các bài toán
 ### 1.1. Preprocessing
