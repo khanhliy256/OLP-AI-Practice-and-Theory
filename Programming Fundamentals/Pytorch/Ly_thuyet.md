@@ -47,6 +47,8 @@ class MyModel(nn.Module):
 - Bước 2: Chuẩn bị dữ liệu X, y 
 - Bước 3: Khởi tạo mô hình
 - Bước 4: Huấn luyện mô hình 
+
+### Một số hàm xử lý dữ liệu 
 Data Handling 
 ```python
 # Thư viện
