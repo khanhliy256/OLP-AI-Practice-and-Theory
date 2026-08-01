@@ -41,6 +41,7 @@ train_test_split(X, y, test_size = ..., random_state = ...)
 Một số dữ liệu có range lớn --> Chiếm ưu thế so với mặt bằng chung --> Một số dự đoán có thể không chính xác.
 
     * Label Encoding: Mã hóa 1 biến thành số nguyên
+
 Ví dụ: 'apple' = 0, 'banana' = 1, 'orange' = 2
 ```python 
 # Thư viện 
@@ -49,7 +50,9 @@ sklearn.preprocssing
 LabelEncode()
 .fit_transform(list)
 ```
+
     * One-Hot Encoding: Đưa về cột nhị phân = 1 biến
+
 ```python
 # Hàm
 OneHotEncoder(sparse_output=False) 
@@ -70,7 +73,6 @@ MinMaxScaler()
 StandardScaler()
 .fit_transform(df)
 ```
-
     * Robust Scaling sử dụng trung bị và khoảng cách 
 ```python
 # Hàm
