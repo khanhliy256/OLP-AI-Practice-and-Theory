@@ -28,4 +28,20 @@ Graphical Processing Unit = [CPU CPU CPU]. GPU tính toán lượng công việc
 > Khi nào cần GPU?
 
 ## Huấn luyện mô hình trên CPU 
+- [Training AI Models on CPU](https://towardsdatascience.com/training-ai-models-on-cpu-3903adc9f388/)
+- [Training Models - Pytorch step-by-step](https://www.codegenes.net/blog/pytorch-cpu-training/)
 
+### Tensors 
+```python
+# Kiểm tra thiết bị 
+tensor_array = torch.tensor([1.5, 8.9, 3], [2.3, 4.4, 9.802])
+print(f"Thiết bị lưu trữ: {tensor_array.device}")
+```
+
+### Computational Graph
+```python
+
+```
+
+|Batch Size|Step time (s)|Throughput (sps)|
+|---|---|---|
