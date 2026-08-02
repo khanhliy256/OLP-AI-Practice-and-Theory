@@ -20,6 +20,19 @@ Trong một tập test, dữ liệu Input có thể random nhưng khi lặp lạ
 
 Giảm sự ngẫu nhiên trong mạng neural, PyTorch cung cấp 1 tập random seed. Vì máy tính không thể tạo một random hoàn toàn, do đó vẫn cần một điểm xuất phát là `seeds_count` trong *manual_seed(seeds_count)*
 
+**Các yếu tố quan trọng**
+- Kết quả nhất quán: Cùng code + dữ liệu
+- Theo dõi thực nghiệm
+- Quản lý phiên bản dữ liệu/mô hình: Lưu được mọi thay đổi với 1 tập dữ liệu
+- Kiểm soát môi trường 
+
 ## Devices
+
+```python
+random.seed(20)
+np.random.seed(20)
+torch.manual_seed(20)
+torch.cuda.manual_seed_all(20)
+```
 
 ## Suy luận
