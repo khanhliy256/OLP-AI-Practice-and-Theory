@@ -40,8 +40,47 @@ print(f"Thiết bị lưu trữ: {tensor_array.device}")
 
 ### Computational Graph
 ```python
+nn_linear = nn.Linear(32, 4) # Lớp mạng Neural
+input_tensor = torch.rand(3, 5, 32, dtype = torch.float)
+Oput = nn_linear(input_tensor)
+```
 
+### Neural models
+```python
+class MyModel(nn.Module):
+    def __init__(self, input_size, output_size):
+        super().__init__:
+        self.linear = nn.Linear(input_size, output_size)
+    def forward(self, x):
+        return self.linear(x)
 ```
 
 |Batch Size|Step time (s)|Throughput (sps)|
 |---|---|---|
+|input()|end_time - start_time|batch_size / step_time|
+
+## Huấn luyện mô hình trên GPU
+
+> Which GPU for Deep Learning/ Machine Learning? Not free
+
+![Các loại Runtime](Runtime_Type.png)
+
+|T4 GPU|
+|---|
+|NVIDIA Tesla T4|
+|15360MiB|
+|có VRAM riêng, nhanh hơn CPU ~ x10 lần|
+
+## Các cách luyện tập phổ biến
+### a. Data Loading
+
+```python
+# Thư viện
+torch.utils.data
+# Hàm
+TensorDataset()
+DataLoader()
+```
+
+### b. Model Evaluation
+Sau khi huấn luyện, cần đánh giá mô hình dựa trên bộ xác thực/kiểm thử.
