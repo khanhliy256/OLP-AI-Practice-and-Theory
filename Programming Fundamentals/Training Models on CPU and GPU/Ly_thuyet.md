@@ -12,7 +12,7 @@ Central Processing Unit = RAM + Cache + CU + AU.
 
 **`Thực hiện tuần tự`**
 
->> Khi nào dùng CPU?
+> Khi nào dùng CPU?
 
 Trong môi trường web server, app AI hay ChatBot (mô hình đã được huấn luyện sẵn), tính toán cơ bản, hệ thống chỉ cần suy luận nhanh nhất có thể. Lúc này CPU được sử dụng phổ biến nhất, vì:
 - Suy luận nhẹ không cần đến GPU
@@ -25,7 +25,7 @@ Graphical Processing Unit = [CPU CPU CPU]. GPU tính toán lượng công việc
 
 **`Thực hiện song song`**
 
->> Khi nào cần GPU?
+> Khi nào cần GPU?
 
 ## Huấn luyện mô hình trên CPU 
 
