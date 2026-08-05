@@ -67,7 +67,7 @@ Thực hiện theo các bước tính theo đạo hàm, lựa chọn loss nhỏ 
 def predict_func(w, b, x):
     return w*x + b
 ```
-- Bước 2: Tính Loss $L(w) = frac{1}{2}(\hat y - y)^2$
+- Bước 2: Tính Loss $L(w) = \frac{1}{2}(\hat y - y)^2$
 ```python
 def compute_loss(y_hat, y):
     return 1/2*(y_hat-y)**2
