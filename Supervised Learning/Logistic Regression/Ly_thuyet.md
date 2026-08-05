@@ -10,8 +10,6 @@ Trong một số tập dữ liệu, có thể sẽ chứa một một nhóm dữ
 
 > Bài toán phân loại
 
-Hàm liên tục trên giá trị thực, bị chặn $[0,1]$.
-
 Phương trình vi phân: $\frac{dy}{dt}=r*y*(1-\frac{y}{K})$ với $K$ là kích thước lớn nhất, $y$ là kích thước tại thời gian $t$.
 
 Giải phương trình vi phân, ta thu được:
@@ -20,6 +18,8 @@ Giải phương trình vi phân, ta thu được:
 Lấy đạo hàm của $\sigma$
 
 $\sigma'(y)=\sigma(y)(1-\sigma(y))$ với $y$ có dạng $y=wx+b$
+
+Hàm liên tục trên giá trị thực, bị chặn $[0,1]$ bằng cách tính $lim_{y\rightarrow -\infty}=0$ và $lim_{y\rightarrow +\infty}=1$
 
 Công thức MSE, RMSE
 
