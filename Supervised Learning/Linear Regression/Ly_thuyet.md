@@ -61,4 +61,42 @@ Ví dụ:
 
 Với các giá trị $w = 1.17, b = 0.26$ thì đường thẳng sẽ như nào? `error` càng nhỏ thì càng tốt.
 
+Thực hiện theo các bước tính theo đạo hàm, lựa chọn loss nhỏ để tìm nghiệm.
+- Bước 1: Hàm tính $\hat y$
+```python
+def predict_func(w, b, x):
+    return w*x + b
+```
+- Bước 2: Tính Loss $L(w) = frac{1}{2}(\hat y - y)^2$
+```python
+def compute_loss(y_hat, y):
+    return 1/2*(y_hat-y)**2
+```
+- Bước 3: Tính đạo hàm của hàm Loss
+```python
+def compute_gradient(y_hat, y, x):
+    return (y_hat - y), x * (y_hat - y)
+```
+- Bước 4: Cập nhật hệ số w, b mới
+```python
+def update(w, b, grad_w, grad_b, alpha):
+    w = w - alpha*grad_w
+    b = b - alpha*grad_b
+    return w, b
+```
 ### Sử dụng thư viện Scikit-learn
+
+```python
+# Thư viện
+sklearn
+# Hàm
+linear_model
+# Trong model đó có:
+LinearRegression()
+# Dùng hàm fit(X,y) --> nghiệm 
+.fit(X, y) 
+# Hệ số weight
+.coef_
+# Hệ số bias
+.intercept_
+```
