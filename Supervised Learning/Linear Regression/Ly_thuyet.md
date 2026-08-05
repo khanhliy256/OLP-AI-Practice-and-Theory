@@ -46,3 +46,19 @@ Nhận xét: $XX^T$ khả nghịch, phương trình có nghiệm duy nhất $w =
 Còn không sẽ có 1 giá trị giả nghịch đảo.
 
 ## Bài tập code 
+### Sử dụng công thức
+
+$\hat y_i = w*x_i+b$
+
+Ví dụ:
+
+|area|price|predicted|error|
+|---|---|---|---|
+|6.7|9.1|||
+|4.6|5.9|||
+|3.5|4.6|||
+|5.5|6.7|||
+
+Với các giá trị $w = 1.17, b = 0.26$ thì đường thẳng sẽ như nào? `error` càng nhỏ thì càng tốt.
+
+### Sử dụng thư viện Scikit-learn
