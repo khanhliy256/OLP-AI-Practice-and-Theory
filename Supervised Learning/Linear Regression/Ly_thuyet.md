@@ -14,6 +14,7 @@ $\Rightarrow \hat y$ = Giá trị dự đoán.
 
 ## Hàm mất mát
 Sai số $e = |y - \hat y|$ nhưng hàm trị tuyệt đối không liên tục, do vậy cần biểu diễn sai số theo cách sau $e^2 = (y - \hat y)^2$.
+> Tại sao phải bình phương mà không phải mũ 4, 6?? Dựa vào công thức xác suất gì?
 
 - Công thức sai số: $e^2 = (y - \textbf{x}^T\textbf{w})^2$
 
