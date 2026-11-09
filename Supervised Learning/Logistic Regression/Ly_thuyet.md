@@ -29,6 +29,8 @@ $L = \frac{1}{N}(\hat y - y)^2$
 Xét trên từng điểm $e_i = (\hat y_i - y_i)$ tạo vector $e$.
 Với $\hat y = \frac{1}{1+e^{-\theta^\top x}}$
 
+Đặt $z = \theta^\top x$,
+
 $\nabla L = \frac{1}{N}X^\top(\hat y - y)$
 
 > Kết luận:
