@@ -21,6 +21,16 @@ $\sigma'(y)=\sigma(y)(1-\sigma(y))$ với $y$ có dạng $y=wx+b$ $\Rightarrow$ 
 
 Hàm liên tục trên giá trị thực, bị chặn $[0,1]$ bằng cách tính $lim_{y\rightarrow -\infty}=0$ và $lim_{y\rightarrow +\infty}=1$
 
+## Hàm mất mát 
+
+Mean Squared Error:
+$L = \frac{1}{N}(\hat y - y)^2$
+
+Xét trên từng điểm $e_i = (\hat y_i - y_i)$ tạo vector $e$.
+Với $\hat y = \frac{1}{1+e^{-\theta^\top x}}$
+
+$\nabla L = \frac{1}{N}X^\top(\hat y - y)$
+
 > Kết luận:
 
 $\textbf{Loss} = -y*\text{log}(\hat y)-(1-y)\text*{log}(1-\hat y)$
