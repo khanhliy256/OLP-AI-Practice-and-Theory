@@ -46,6 +46,41 @@ Nhận xét: $XX^T$ khả nghịch, phương trình có nghiệm duy nhất $w =
 
 Còn không sẽ có 1 giá trị giả nghịch đảo.
 
+> Một cách vectorization
+
+- `Mean Squared Error` (MSE):
+
+$L(\theta) = \frac{1}{N}\sum_{i=1}^{N}(\hat y_i - y_i)^2$.
+
+ Do đó, đặt $e_i = \hat y_i - y$, thì thu được $\sum_{i=1}^{N}(\hat y_i - y_i)^2=e^\top e$.
+
+Khai triển ma trận bằng tính chất $(A-B)^\top=A^\top - B^\top, (AB)^\top = B^\top A^\top$. Áp dụng vào $L(\theta)$, ta có:
+
+$L(\theta) = \frac{1}{N}(X\theta-y)^\top(X\theta -y) \\
+=\frac{1}{N}(\theta^\top X^\top - y^\top)(X\theta - y) \\
+= L(\theta) = \frac{1}{N} \left( \theta^\top X^\top X \theta - \theta^\top X^\top y - y^\top X \theta + y^\top y \right)$ 
+
+và $$(\theta^\top X^\top y)^\top = y^\top (X\theta) = y^\top X \theta$$
+
+Ta biến đổi thành
+
+$$L(\theta) = \frac{1}{N} \left( \theta^\top X^\top X \theta - 2 \theta^\top X^\top y + y^\top y \right)$$
+
+> Tính đạo hàm theo vector, sử dụng quy tắc đạo hàm ma trận tiêu chuẩn 
+
+$\frac{\partial (\theta^\top A \theta)}{\partial \theta} = 2 A \theta$ (khi $A = X^\top X$ là ma trận đối xứng)
+
+$\frac{\partial (\theta^\top b)}{\partial \theta} = b$ (với $b = X^\top y$)
+
+$\frac{\partial (y^\top y)}{\partial \theta} = \mathbf{0}$ (hằng số đối với $\theta$)
+
+Áp dụng các quy tắc trên vào biểu thức $L(\theta)$:
+$$\nabla_{\theta} L = \frac{1}{N} \left( 2 X^\top X \theta - 2 X^\top y \right)$$
+
+Đặt $2 X^\top$ làm nhân tử chung:$$\nabla_{\theta} L = \frac{2}{N} X^\top (X\theta - y)$$
+
+$\textbf{Loss} = \frac{1}{N}(\hat y - y)^\top(\hat y - y)$ với $\hat y = X\theta$
+
 ## Bài tập code 
 ### Sử dụng công thức
 
